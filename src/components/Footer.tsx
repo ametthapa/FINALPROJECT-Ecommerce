@@ -26,30 +26,30 @@ const Footer = () =>{
                         <div className="col-md-3 w3_footer_grid">
                             <h3>Information</h3>
                             <ul className="info"> 
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="about.html">About Us</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="contact.html">Contact Us</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="short-codes.html">Short Codes</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="faq.html">FAQ's</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="products.html">Special Products</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="about.html">About Us</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="contact.html">Contact Us</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="short-codes.html">Short Codes</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="faq.html">FAQ's</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="products.html">Special Products</a></li>
                             </ul>
                         </div>
                         <div className="col-md-3 w3_footer_grid">
                             <h3>Category</h3>
                             <ul className="info"> 
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="groceries.html">Groceries</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="household.html">Household</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="personalcare.html">Personal Care</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="packagedfoods.html">Packaged Foods</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="beverages.html">Beverages</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="groceries.html">Groceries</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="household.html">Household</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="personalcare.html">Personal Care</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="packagedfoods.html">Packaged Foods</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="beverages.html">Beverages</a></li>
                             </ul>
                         </div>
                         <div className="col-md-3 w3_footer_grid">
                             <h3>Profile</h3>
                             <ul className="info"> 
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="products.html">Store</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="checkout.html">My Cart</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="login.html">Login</a></li>
-                                <li><BiRightArrow className="fa fa-arrow-right" aria-hidden="true" /><a href="registered.html">Create Account</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="products.html">Store</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="checkout.html">My Cart</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="login.html">Login</a></li>
+                                <li><i className="fa fa-arrow-right" aria-hidden="true" ></i><a href="registered.html">Create Account</a></li>
                             </ul>
                         </div>
                         <div className="clearfix"> </div>
@@ -72,7 +72,7 @@ const Footer = () =>{
                             </ul>
                         </div>
                         <div className="payment-w3ls">	
-                            <img src="images/card.png" alt=" " className="img-responsive" />
+                            <img src="assets/images/card.png" alt=" " className="img-responsive" />
                         </div>
                         <div className="clearfix"> </div>
                     </div>
