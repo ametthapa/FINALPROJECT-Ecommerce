@@ -1,6 +1,10 @@
+import Breadcrumbs from "../components/Breadcrumbs";
 const AboutPage = () =>{
     return (
-        <div></div>
+        <div>
+            <Breadcrumbs />
+            
+        </div>
     )
 }
 export default AboutPage;
