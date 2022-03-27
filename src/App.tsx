@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import HomePage from './pages/HomePage';
 import Login from './components/Login';
 import Register from './components/Register';
+import Contact from './components/Contact';
 
 const App:FC =()=> {
   return (
@@ -25,6 +26,9 @@ const App:FC =()=> {
       </Routes>
       <Routes>
         <Route path="/register" element={<Register />} />
+      </Routes>
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

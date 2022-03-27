@@ -117,7 +117,7 @@ const NavigationBar = () =>{
                                 </li>
                                 <li><a href="gourmet.html">Gourmet</a></li>
                                 <li><a href="offers.html">Offers</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
 					</nav>

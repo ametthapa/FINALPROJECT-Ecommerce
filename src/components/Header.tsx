@@ -9,9 +9,9 @@ const Header = () =>{
                     </div>
                     <div className="agile-login">
                         <ul>
-                            <li><a href="registered.html"> Create Account </a></li>
+                            <li><Link to="/register"> Create Account </Link></li>
                             <li><Link to="/login">Login</Link></li>
-                            <li><a href="contact.html">Help</a></li>
+                            <li><Link to="/contact">Help</Link></li>
                             
                         </ul>
                     </div>
