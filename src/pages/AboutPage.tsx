@@ -1,9 +1,8 @@
-import Breadcrumbs from "../components/Breadcrumbs";
+import About from "../components/About";
 const AboutPage = () =>{
     return (
         <div>
-            <Breadcrumbs />
-            
+            <About />
         </div>
     )
 }

@@ -1,7 +1,9 @@
-
+import Main from "../components/Main";
 const HeaderPage = () =>{
     return (
-        <div></div>
+        <div>
+            <Main />
+        </div>
     )
 }
 export default HeaderPage;

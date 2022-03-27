@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const NavigationBar = () =>{
     return (
         <div>
@@ -15,7 +16,7 @@ const NavigationBar = () =>{
 						</div> 
                         <div className="collapse navbar-collapse" id="bs-megadropdown-tabs">
                             <ul className="nav navbar-nav">
-                                <li className="active"><a href="index.html" className="act">Home</a></li>	
+                                <li className="active"><Link to="/" className="act">Home</Link></li>	
                                 {/* Mega Menu */}
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown">Groceries<b className="caret"></b></a>

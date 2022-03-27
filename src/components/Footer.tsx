@@ -19,7 +19,7 @@ const Footer = () =>{
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Information</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/about">About Us</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
