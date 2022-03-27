@@ -41,7 +41,7 @@ const Footer = () =>{
 					<ul className="info"> 
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/login">Login</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
 					</ul>
 				</div>

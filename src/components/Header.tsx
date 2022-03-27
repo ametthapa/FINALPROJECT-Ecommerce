@@ -10,7 +10,7 @@ const Header = () =>{
                     <div className="agile-login">
                         <ul>
                             <li><a href="registered.html"> Create Account </a></li>
-                            <li><a href="login.html">Login</a></li>
+                            <li><Link to="/login">Login</Link></li>
                             <li><a href="contact.html">Help</a></li>
                             
                         </ul>
