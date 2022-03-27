@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Login from './components/Login';
 import Register from './components/Register';
 import Contact from './components/Contact';
+import Error from './components/Error';
 
 const App:FC =()=> {
   return (
@@ -30,6 +31,9 @@ const App:FC =()=> {
       <Routes>
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      {/* <Routes>
+        <Route path="*" element={<Error />} />
+      </Routes> */}
       <Footer />
     </div>
   );
