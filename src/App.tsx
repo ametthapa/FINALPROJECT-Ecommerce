@@ -4,12 +4,12 @@ import './App.css';
 import { Routes,Route } from 'react-router-dom';
 
 import Footer from './components/Footer';
-import HeaderPart from './pages/HeaderPart';
+import HeaderPart from './components/HeaderPart';
 import AboutPage from './pages/AboutPage';
 import HomePage from './pages/HomePage';
-import Login from './components/Login';
-import Register from './components/Register';
-import Contact from './components/Contact';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Contact from './pages/Contact';
 import Error from './components/Error';
 
 const App:FC =()=> {

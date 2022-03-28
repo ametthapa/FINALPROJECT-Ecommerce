@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import NavigationBar from "../components/NavigationBar";
+import Header from "./Header";
+import NavigationBar from "./NavigationBar";
 
 const HeaderPart = () =>{
     return (

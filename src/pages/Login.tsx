@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Login = () =>{
-    const [email,setEmail] = useState<string>("");
+    const [username,setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const admin="admin";
 
     const postRequestHandler = async (e:any) =>{
         e.preventDefault();
         const data={
-            email,
-            password
+            username,
+            password,
+            grant_type:admin,
         }
         console.log(data)
 
@@ -30,7 +32,7 @@ const Login = () =>{
                 
                     <div className="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
                         <form>
-                            <input type="email" placeholder="Email Address" value={email} name={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="email" placeholder="Email Address" value={username} name={username} onChange={(e) => setEmail(e.target.value)} required />
                             <input type="password" placeholder="Password" value={password} name={password} onChange={(e) => setPassword(e.target.value)} required />
                             <div className="forgot">
                                 <a href="#">Forgot Password?</a>
