@@ -1,19 +1,24 @@
+
 import {useState } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Login = () =>{
+    const client_id=2;
+    const client_secret = "olzBb6we0po4B0PSJyDpNGhhSsnvZmeio8sRoASa";
+    const grant_type ="password"
     const [username,setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const admin="admin";
 
     const postRequestHandler = async (e:any) =>{
         e.preventDefault();
         const data={
+            client_id,
+            client_secret,
+            grant_type,
             username,
             password,
-            grant_type:admin,
         }
         console.log(data)
 
