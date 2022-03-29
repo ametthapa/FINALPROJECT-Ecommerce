@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Contact from './pages/Contact';
 import Error from './components/Error';
+import ForgotPassword from './pages/ForgotPassword';
 
 const App:FC =()=> {
   return (
@@ -30,6 +31,9 @@ const App:FC =()=> {
       </Routes>
       <Routes>
         <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Routes>
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
       </Routes>
       {/* <Routes>
         <Route path="*" element={<Error />} />
