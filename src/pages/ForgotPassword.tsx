@@ -1,20 +1,26 @@
-import { Link } from "react-router-dom"
+import { Link,useNavigate  } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
 
 const ForgotPassword = () =>{
+    const navigate=useNavigate();
+
+
     const [username,setEmail] = useState<string>("");
 
     const postRequestHandler = async (e:any) =>{
         e.preventDefault();
         const data={
-            username,
+            email:username,
         }
         console.log(data)
 
-        const response = await axios.post("https://uat.ordering-boafresh.ekbana.net/api/v4/auth/login",data)
+        const response = await axios.post("https://uat.ordering-boafresh.ekbana.net/api/v4/auth/forgot-password",data)
 
-        console.log(response);
+        if(response.status===200){
+            alert("Check Email for password reset");
+            navigate("/");
+        }
     }
     return(
         <>
@@ -36,4 +42,4 @@ const ForgotPassword = () =>{
         </>
     )
 }
-export default ForgotPassword
+export default ForgotPassword;

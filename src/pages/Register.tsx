@@ -142,7 +142,7 @@ const Register:FC = () =>{
                         {/* }} */}
                     </div>
                     <div className="register-home">
-                        <Link to="index.html">Home</Link>
+                        <Link to="/">Home</Link>
                     </div>
                 </div>
             </div>
