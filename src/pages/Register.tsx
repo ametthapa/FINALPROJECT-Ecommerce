@@ -3,6 +3,7 @@ import axios from "axios";
 import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FC, useState } from "react";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 // interface MyFormVales {
 //     firstName:string;
@@ -80,6 +81,7 @@ const Register:FC = () =>{
         // }}
         // >
         <div>
+            <Breadcrumbs name="Register Page" />
             <div className="register">
                 <div className="container">
                     <h2>Register Here</h2>

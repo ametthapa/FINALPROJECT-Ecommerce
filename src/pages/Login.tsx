@@ -3,6 +3,7 @@ import {useState } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const Login = () =>{
     const client_id=2;
@@ -19,18 +20,41 @@ const Login = () =>{
             grant_type,
             username,
             password,
+            email:username,
         }
         console.log(data)
 
-        const response = await axios.post("https://uat.ordering-boafresh.ekbana.net/api/v4/auth/login",data)
+        // const response = await axios.post("https://uat.ordering-boafresh.ekbana.net/api/v4/auth/login",data)
 
-        console.log(response);
+        // console.log(response);
+        fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/auth/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              if (data.expires_in) {
+                alert(
+                  "Your are logged in successfully. Your session will expire after " +
+                    data.expires_in / (3600 * 24) +
+                    " days."
+                );
+                window.location.href = "/";
+              } else {
+                alert("Login failed!");
+              }
+              console.log(data);
+            });
+      
     }
-
-
-
     return (
         <div>
+            <Breadcrumbs name="Login Page" />
             <div className="login">
                 <div className="container">
                     <h2>Login Form</h2>

@@ -1,6 +1,7 @@
 import { Link,useNavigate  } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ForgotPassword = () =>{
     const navigate=useNavigate();
@@ -24,6 +25,7 @@ const ForgotPassword = () =>{
     }
     return(
         <>
+        <Breadcrumbs name="Forgot Password" />
         <div>
             <div className="login">
                 <div className="container">
