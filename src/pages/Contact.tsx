@@ -1,6 +1,9 @@
+import Breadcrumbs from "../components/Breadcrumbs";
+
 const Contact = () =>{
     return (
         <div>
+            <Breadcrumbs name="Contact" />
             <div className="about">
                 <div className="w3_agileits_contact_grids">
                     <div className="col-md-6 w3_agileits_contact_grid_left">
