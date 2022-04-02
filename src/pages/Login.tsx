@@ -39,6 +39,7 @@ const Login =()=> {
           alert("Login failed!");
         }
         localStorage.setItem('access_token',data.access_token);
+        localStorage.setItem('warehouse_id',data.warehouse_id);
       });
   } 
     return (

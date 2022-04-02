@@ -19,6 +19,8 @@ const ForgotPassword = () =>{
         if(response.status===200){
             alert("Check Email for password reset");
             navigate("/");
+        }else{
+            alert("Please provide correct email");
         }
     }
     return(
