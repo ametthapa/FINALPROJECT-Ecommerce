@@ -19,7 +19,7 @@ const NavigationBar = () =>{
                                 <li className="active"><Link to="/" className="act">Home</Link></li>	
                                 {/* Mega Menu */}
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">Groceries<b className="caret"></b></a>
+                                    <Link to="#" className="dropdown-toggle" data-toggle="dropdown">Groceries<b className="caret"></b></Link>
                                     <ul className="dropdown-menu multi-column columns-3">
                                         <div className="row">
                                             <div className="multi-gd-img">

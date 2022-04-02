@@ -29,7 +29,7 @@ const Footer = () =>{
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Category</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/groceries">Groceries</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
