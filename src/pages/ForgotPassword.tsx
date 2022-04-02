@@ -5,8 +5,6 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 const ForgotPassword = () =>{
     const navigate=useNavigate();
-
-
     const [username,setEmail] = useState<string>("");
 
     const postRequestHandler = async (e:any) =>{

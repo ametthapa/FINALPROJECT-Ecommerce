@@ -2,20 +2,23 @@ import { Link } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 const Login =()=> {
-const clientSecret:string = "olzBb6we0po4B0PSJyDpNGhhSsnvZmeio8sRoASa";
-const ClientId:string = "2";
+//   const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+//   console.log(API_KEY);
+// const clientSecret:string = "olzBb6we0po4B0PSJyDpNGhhSsnvZmeio8sRoASa";
+// const ClientId:string = "2";
 
   const handleLogin=async (e: any)=> {
     e.preventDefault();
     // const formData = new FormData(e);
     const loginData = {
-      grant_type: "password",
+      grant_type: process.env.REACT_APP_GRANT_TYPE,
       email: e.target.email.value,
       username: e.target.email.value,
-      client_id: ClientId,
-      client_secret: clientSecret,
+      client_id: process.env.REACT_APP_CLIENT_ID,
+      client_secret: process.env.REACT_APP_CLIENTSECRET,
       password: e.target.password.value,
     };
+    // console.log(loginData);
 
     fetch("https://uat.ordering-dalle.ekbana.net/api/v4/auth/login", {
       method: "POST",
@@ -66,16 +69,14 @@ const ClientId:string = "2";
                   required
                 />
                 <div className="forgot">
-                  <div>
-                    <b>Forgot Password?</b>
-                  </div>
+                <Link to="/forgotpassword">Forgot Password?</Link>
                 </div>
                 <input type="submit" value="Login" />
               </form>
             </div>
             <h4>For New People</h4>
             <p>
-              <Link to="/registered">Register Here</Link> (Or) go back to{" "}
+              <Link to="/register">Register Here</Link> (Or) go back to{" "}
               <Link to="/">
                 Home
                 <span
