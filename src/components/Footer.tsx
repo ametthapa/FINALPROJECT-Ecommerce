@@ -1,7 +1,35 @@
-
 import {Link} from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Root } from "./interface/ProductInterface";
+import axios from "axios";
 
 const Footer = () =>{
+	const [categories,setCategories]=useState<Root>();
+    const warehouse_id = Number(localStorage.getItem('warehouse_id'));
+    const apiKey:any = process.env.REACT_APP_API_KEY;
+    // console.log(typeof warehouse_id);
+
+    useEffect(() => {
+        const getCategory = async () => {
+          try {
+            const config = {
+              headers: {
+                  "Api-Key": apiKey,
+                  "Warehouse-Id": warehouse_id
+                },
+            };
+            const response = await axios.get(`https://uat.ordering-dalle.ekbana.net/api/v4/category`, config);
+    
+            if (response.status === 200) {
+              setCategories(response.data);
+            }
+          } catch (e) {
+            console.log("Something went wrong", e);
+          }
+        };
+        getCategory();
+      console.log(categories);
+      }, []);
     return (
         <div>
             <div className="footer">
@@ -20,7 +48,7 @@ const Footer = () =>{
 					<h3>Information</h3>
 					<ul className="info"> 
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/about">About Us</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/contact">Contact Us</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/faq">FAQ's</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a></li>
@@ -29,20 +57,24 @@ const Footer = () =>{
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Category</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/groceries">Groceries</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+					{categories && categories.data.map((category:any)=>{
+						return (
+						<li key={category.id}>
+							<i className="fa fa-arrow-right" aria-hidden="true"></i>
+							<Link to={"/" + category.title.toLowerCase()}>{category.title.charAt(0).toUpperCase() + category.title.slice(1).toLowerCase()}</Link>
+						</li>
+						)
+					})}
+						
 					</ul>
 				</div>
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Profile</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="/products">Store</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><Link to="/login">Login</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"></i><a href="/register">Create Account</a></li>
 					</ul>
 				</div>
 				<div className="clearfix"> </div>

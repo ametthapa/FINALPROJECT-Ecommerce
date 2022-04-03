@@ -45,13 +45,15 @@ const NavigationBar = () =>{
 						</div> 
                         <div className="collapse navbar-collapse" id="bs-megadropdown-tabs">
                             <ul className="nav navbar-nav">
-                                <li className="active"><Link to="/" className="act">HOME</Link></li>	
+                                <li className="active"><Link to="/" className="act">Home</Link></li>	
                                 {/* Mega Menu */}
                                 
                                {categories && categories.data.map((category:any)=>{
                                    return (
-                                    <li className="dropdown">
-                                    <Link to={"/"+ category.title.toLowerCase()} className="dropdown-toggle" data-toggle="dropdown">{category.title.charAt(0).toUpperCase() + category.title.slice(1)}<b className="caret"></b></Link>
+                                    <li className="dropdown" key={category.id}>
+                                    <Link to={"/"+ category.title.toLowerCase()} className="dropdown-toggle" data-toggle="dropdown">{category.title.charAt(0).toUpperCase() + category.title.slice(1).toLowerCase()}
+                                    <b className="caret"></b>
+                                    </Link>
                                     <ul className="dropdown-menu multi-column columns-3">
                                         <div className="row">
                                             <div className="multi-gd-img">
@@ -69,7 +71,6 @@ const NavigationBar = () =>{
                                 </li>
                                    )
                                })}
-                                <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
 					</nav>
