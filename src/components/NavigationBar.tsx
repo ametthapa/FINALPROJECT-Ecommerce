@@ -27,7 +27,6 @@ const NavigationBar = () =>{
           }
         };
         getCategory();
-      console.log(categories);
       }, []);
     return (
         <div>

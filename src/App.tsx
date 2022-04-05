@@ -14,6 +14,7 @@ import Error from './components/Error';
 import ForgotPassword from './pages/ForgotPassword';
 import FAQ from './pages/FAQ';
 import Groceries from './pages/Groceries';
+import Product from './components/Product';
 
 const App:FC =()=> {
   return (
@@ -43,6 +44,9 @@ const App:FC =()=> {
       </Routes>
       <Routes>
         <Route path="/groceries" element={<Groceries />} />
+      </Routes>
+      <Routes>
+        <Route path="/products" element={<Product />} />
       </Routes>
 
       {/* <Routes>

@@ -28,7 +28,6 @@ const Categories =()=> {
         }
       };
       getCategory();
-    console.log(categories);
     }, []);
     return (
       <div className="categories">

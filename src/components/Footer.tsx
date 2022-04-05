@@ -28,7 +28,6 @@ const Footer = () =>{
           }
         };
         getCategory();
-      console.log(categories);
       }, []);
     return (
         <div>
