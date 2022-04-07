@@ -5,7 +5,7 @@ const Header = () =>{
             <div className="agileits_header">
                 <div className="container">
                     <div className="w3l_offers">
-                        <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <Link to="/products">SHOP NOW</Link></p>
+                        <p>SALE UP TO 70% OFF. USE CODE "SALE70" . <Link to="/products">SHOP NOW</Link></p>
                     </div>
                     <div className="agile-login">
                         <ul>
