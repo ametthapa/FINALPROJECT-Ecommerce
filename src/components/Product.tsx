@@ -4,6 +4,7 @@ import axios from "axios";
 import {Root} from "./interface/ProductInterface";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const Product = () =>{
     const [products,setProducts]= useState<Root>();
@@ -42,7 +43,21 @@ const Product = () =>{
             <div className="col-md-4 products-left">
               <Categories />
             </div>
-            
+            <div className="agile_top_brands_grids">
+                {products && products.data.map((product:any)=>{
+                    return (
+                        <ProductCard
+                            key ={product.id}
+                            offer={product.unitPrice[0].hasOffer} 
+                            image={product.categoryBackgroundImage}
+                            title={product.title}
+                            markedPrice={product.unitPrice[0].markedPrice}
+                            sellPrice={product.unitPrice[0]}
+                        />
+                    )
+                })}
+            <div className="clearfix"> </div>
+            </div>
           </div>
         </div>
         </>

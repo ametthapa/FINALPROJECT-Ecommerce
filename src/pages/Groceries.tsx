@@ -2,63 +2,72 @@ import { Component } from "react";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Categories from "../components/Categories";
 import PageSort from "../components/PageSort";
-import Product from "./Product";
+import Product from "../components/ProductCard";
 
 
 const groceriesProducts = [
   {
-    name: "Toor Dal",
-    discountedPrice: 35.99,
+    title: "Toor Dal",
+    sellPrice: 35.99,
     markedPrice: 55.0,
-    imgFile: "14.png",
+    image: "14.png",
+    offer:false,
   },
   {
-    name: "Moong Dal",
-    discountedPrice: 30.99,
+    title: "Moong Dal",
+    sellPrice: 30.99,
     markedPrice: 45.0,
-    imgFile: "15.png",
+    image: "15.png",
+    offer:true,
   },
   {
-    name: "Channa",
-    discountedPrice: 80.99,
+    title: "Channa",
+    sellPrice: 80.99,
     markedPrice: 105.0,
-    imgFile: "16.png",
+    image: "16.png",
+    offer:true,
   },
   {
-    name: "Arhar Dal",
-    discountedPrice: 35.99,
+    title: "Arhar Dal",
+    sellPrice: 35.99,
     markedPrice: 55.0,
-    imgFile: "17.png",
+    image: "17.png",
+    offer:true,
   },
   {
-    name: "Toor Dal",
-    discountedPrice: 30.99,
+    title: "Toor Dal",
+    sellPrice: 30.99,
     markedPrice: 45.0,
-    imgFile: "14.png",
+    image: "14.png",
+    offer:true,
   },
   {
-    name: "Moong Dal",
-    discountedPrice: 80.99,
+    title: "Moong Dal",
+    sellPrice: 80.99,
     markedPrice: 105.0,
-    imgFile: "15.png",
+    image: "15.png",
+    offer:true,
   },
   {
-    name: "Channa",
-    discountedPrice: 35.99,
+    title: "Channa",
+    sellPrice: 35.99,
     markedPrice: 55.0,
-    imgFile: "16.png",
+    image: "16.png",
+    offer:true,
   },
   {
-    name: "Arhar Dal",
-    discountedPrice: 30.99,
+    title: "Arhar Dal",
+    sellPrice: 30.99,
     markedPrice: 45.0,
-    imgFile: "17.png",
+    image: "17.png",
+    offer:true,
   },
   {
-    name: "Toor Dal",
-    discountedPrice: 80.99,
+    title: "Toor Dal",
+    sellPrice: 80.99,
     markedPrice: 105.0,
-    imgFile: "14.png",
+    image: "14.png",
+    offer:true,
   },
 ];
 
